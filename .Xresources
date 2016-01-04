@@ -1,0 +1,14 @@
+! comment
+!Xft.dpi: 220
+!Xft.lcdfilter: lcddefault
+!Xft.antialias: true
+!Xft.rgba: rgb
+!Xft.autohint: false
+!Xft.hinting: true
+!Xft.hintstyle: hintfull
+
+! Apple uses Menlo but it sucks without font antialiasing
+XTerm*faceName: Terminus:style=Regular:size=10
+XTerm*renderFont: true
+!XTerm*faceName: VeraMono
+!XTerm*faceSize: 10
