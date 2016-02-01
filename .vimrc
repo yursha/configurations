@@ -1,10 +1,4 @@
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-" Plugin 'VundleVim/Vundle.vim'
-" Plugin 'pangloss/vim-javascript'
-" call vundle#end()
-
-set nocompatible "vim, not vi
+set nocompatible
 
 " file type detection
 filetype off
@@ -20,8 +14,8 @@ set noswapfile
 " configure indentation
 set backspace=eol,start,indent
 set expandtab " replace `tab` with spaces
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set list " display EOL markers
 set wrapscan
 set autoindent " automatically indent on `enter` key.
@@ -29,8 +23,8 @@ filetype plugin indent on
 
 " configure search and replace
 set hlsearch
-set ignorecase
 set incsearch
+set noignorecase
 
 " configure appearance
 set ruler " show current line, column and percentage of total file size
