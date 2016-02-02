@@ -17,7 +17,6 @@ set expandtab " replace `tab` with spaces
 set tabstop=2
 set shiftwidth=2
 set list " display EOL markers
-set wrapscan
 set autoindent " automatically indent on `enter` key.
 filetype plugin indent on
 
@@ -25,6 +24,7 @@ filetype plugin indent on
 set hlsearch
 set incsearch
 set noignorecase
+set nowrapscan
 
 " configure appearance
 set ruler " show current line, column and percentage of total file size
@@ -32,9 +32,9 @@ set number " show line numbers
 set cursorline " show current line
 
 " misc
-set eol " appen line feed (ASCII 10) when saving file
+set wrap
+set eol " append newline (ASCII 10) when saving file
 set scrolloff=5
-set nowrap
 set sidescroll=10
 set whichwrap=b,s,<,>,[,]
 set listchars=tab:>-,trail:-
