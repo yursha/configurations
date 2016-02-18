@@ -10,4 +10,4 @@ PS1='% '
 export PATH=$PATH:~/tools/jdk1.8.0_66/bin:~/tools/apache-maven-3.3.9/bin
 
 # Used by Firefox to launch in HiDPI mode
-export GDK_SCALE=2
+export GDK_SCALE=1
