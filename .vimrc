@@ -14,8 +14,8 @@ set noswapfile
 " configure indentation
 set backspace=eol,start,indent
 set expandtab " replace `tab` with spaces
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set list " display EOL markers
 set autoindent " automatically indent on `enter` key.
 filetype plugin indent on
