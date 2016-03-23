@@ -1,0 +1,10 @@
+[color]
+	ui = auto
+[user]
+	email = alexyursha@gmail.com
+	name = Alex Yursha
+[push]
+	default = simple
+[core]
+[core]
+	editor = vim
