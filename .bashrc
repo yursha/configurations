@@ -9,7 +9,7 @@ PS1='% '
 
 platform=$(uname)
 
-export PATH=$PATH:~/tools/jdk1.8.0_66/bin:~/tools/apache-maven-3.3.9/bin
+export PATH=$PATH:~/tools/bin:~/tools/jdk1.8.0_66/bin:~/tools/apache-maven-3.3.9/bin
 export GDK_SCALE=1 # Used by Firefox to launch in HiDPI mode
 
 if [[ "$platform" == 'Darwin' ]]; then
