@@ -1,6 +1,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export PATH=$PATH:~/tools/bin:~/tools/jdk1.8.0_66/bin:~/tools/apache-maven-3.3.9/bin
+export GDK_SCALE=1 # Used by Firefox to launch in HiDPI mode
+
+# Export python startup script. Currently its used to enable python REPL autocomple feature.
+export PYTHONSTARTUP=~/.pythonrc
+
+LC_ALL=en_US.UTF-8
+
 function ouch {
     echo "Fail @ [${BASH_SOURCE}:${1} ${2}]"
 }
@@ -8,11 +16,6 @@ function ouch {
 PS1='% '
 
 platform=$(uname)
-
-export PATH=$PATH:~/tools/bin:~/tools/jdk1.8.0_66/bin:~/tools/apache-maven-3.3.9/bin
-export GDK_SCALE=1 # Used by Firefox to launch in HiDPI mode
-export PYTHONSTARTUP=~/.pythonrc
-
 
 if [[ "$platform" == 'Darwin' ]]; then
     alias ls='gls --color=auto --group-directories-first -ah' # use coreutils from GNU (available thru Homebrew)
@@ -22,6 +25,7 @@ if [[ "$platform" == 'Darwin' ]]; then
     . $(brew --prefix nvm)/nvm.sh
 
 elif [[ "$platform" == 'Linux' ]]; then
+    setfont ter-v32n
     alias ls='ls --color=auto --group-directories-first -ah'
 else
     ouch $LINENO "Unknown platform: $platform"
