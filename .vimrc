@@ -4,7 +4,7 @@ set nocompatible
 filetype off
 
 " syntax highlighting
-syntax off
+syntax on
 
 " don't write junk files
 set nobackup " don't create backup `.swp` files
@@ -40,3 +40,11 @@ set whichwrap=b,s,<,>,[,]
 set listchars=tab:>-,trail:-
 set iskeyword=@,48-57,192-255,-
 set cmdheight=1
+
+" imap def{TAB} def ():<ESC>3ha - why that doesn't work?
+nnoremap expy o```python<ENTER># python<ENTER>```<ESC><S-o>
+nnoremap exbash o```bash<ENTER># bash<ENTER>```<ESC><S-o>
+nnoremap exjava o```java<ENTER>// java<ENTER>```<ESC><S-o>
+nnoremap exscala o```scala<ENTER>// scala<ENTER>```<ESC><S-o>
+nnoremap experl o```perl<ENTER># perl<ENTER>```<ESC><S-o>
+nnoremap exc o```c<ENTER>// c<ENTER>```<ESC><S-o>

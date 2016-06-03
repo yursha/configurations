@@ -1,7 +1,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PATH=$PATH:~/tools/bin:~/tools/jdk1.8.0_66/bin:~/tools/apache-maven-3.3.9/bin
+export JAVA_HOME=~/tools/jdk1.8.0_92
+JAVA_BIN=$JAVA_HOME/bin
+MAVEN_BIN=~/tools/apache-maven-3.3.9/bin
+export HADOOP_PREFIX=~/tools/hadoop-2.6.0
+HADOOP_BIN=$HADOOP_PREFIX/bin
+
+export PATH=.:$JAVA_BIN:$MAVEN_BIN:$HADOOP_BIN:$PATH
 export GDK_SCALE=1 # Used by Firefox to launch in HiDPI mode
 
 # Export python startup script. Currently its used to enable python REPL autocomple feature.
@@ -33,3 +39,7 @@ fi
 
 alias ll='ls -l'
 alias l1='ls -1'
+
+# FUNCTIONS #
+
+function show () { echo -n "-> "; for a in "$@"; do echo -n "\"$a\" "; done; echo; }
