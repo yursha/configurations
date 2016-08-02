@@ -1,13 +1,40 @@
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
-export JAVA_HOME=~/tools/jdk1.8.0_92
+### X configuration ###
+if [[ -n $DISPLAY ]]; then
+    xmodmap -e 'remove Lock = Caps_Lock'
+fi
+
+### Tools and PATH ###
+
+export JAVA7_HOME=~/tools/jdk1.7.0_79
+JAVA7_BIN=$JAVA7_HOME/bin
+
+export JAVA8_HOME=~/tools/jdk1.8.0_92
+JAVA8_BIN=$JAVA8_HOME/bin
+
+export JAVA_HOME=$JAVA8_HOME
 JAVA_BIN=$JAVA_HOME/bin
-MAVEN_BIN=~/tools/apache-maven-3.3.9/bin
+
+export MAVEN_HOME=~/tools/apache-maven-3.3.9
+MAVEN_BIN=$MAVEN_HOME/bin
+
 export HADOOP_PREFIX=~/tools/hadoop-2.6.0
 HADOOP_BIN=$HADOOP_PREFIX/bin
 
-export PATH=.:$JAVA_BIN:$MAVEN_BIN:$HADOOP_BIN:$PATH
+export SCALA_HOME=~/tools/scala-2.11.8
+SCALA_BIN=$SCALA_HOME/bin
+
+export SBT_HOME=~/tools/sbt
+SBT_BIN=$SBT_HOME/bin
+
+export GOROOT=~/tools/go
+GO_BIN=$GOROOT/bin
+export GOPATH=~/tools/go-code
+
+export PATH=.:$JAVA_BIN:$MAVEN_BIN:$HADOOP_BIN:$SCALA_BIN:$SBT_BIN:$GO_BIN:$PATH
+
 export GDK_SCALE=1 # Used by Firefox to launch in HiDPI mode
 
 # Export python startup script. Currently its used to enable python REPL autocomple feature.
