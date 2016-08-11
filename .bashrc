@@ -81,8 +81,11 @@ function ouch {
 if [[ -n $DISPLAY ]]; then
 
     # Disable CAPS_LOCK key
-    echo "Disabling CAPS_LOCK"
-    xmodmap -e 'remove Lock = Caps_Lock'
+    # Sometimes `xmodmap` command works, but sometimes `setxkbmap` command works.
+    # I don't know why.
+
+    # xmodmap -e 'remove Lock = Caps_Lock'
+    setxkbmap -option ctrl:nocaps
 else
 
     # The only Linux VT raster font which which has big enough variant for HiDPI displays
