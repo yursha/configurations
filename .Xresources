@@ -2,4 +2,4 @@
 XTerm*Background: LemonChiffon
 XTerm*faceName: Terminus:style=Regular:size=10
 XTerm*renderFont: true
-Xft.dpi: 220
+! Xft.dpi: 220
