@@ -62,6 +62,10 @@ bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym Mod4+Shift+e exit
 
+# change keyboard layout
+bindsym Mod4+Down exec setxkbmap us
+bindsym Mod4+Up exec setxkbmap ru
+
 # execute on startup
 exec chromium-browser
 exec xterm
