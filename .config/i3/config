@@ -63,6 +63,7 @@ bindsym Mod4+Shift+r restart
 bindsym Mod4+Shift+e exit
 
 # change keyboard layout
+# this must be a layout-agnostic binding (don't use keys which change meaning in different layouts)
 bindsym Mod4+Down exec setxkbmap us
 bindsym Mod4+Up exec setxkbmap ru
 
