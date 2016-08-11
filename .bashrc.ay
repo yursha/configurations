@@ -6,6 +6,8 @@ if [[ -n $DISPLAY ]]; then
     xmodmap -e 'remove Lock = Caps_Lock'
 fi
 
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
 ### Tools and PATH ###
 
 export JAVA7_HOME=~/tools/jdk1.7.0_79
