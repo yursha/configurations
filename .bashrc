@@ -81,6 +81,7 @@ function ouch {
 if [[ -n $DISPLAY ]]; then
 
     # Disable CAPS_LOCK key
+    echo "Disabling CAPS_LOCK"
     xmodmap -e 'remove Lock = Caps_Lock'
 else
 
