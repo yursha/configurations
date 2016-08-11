@@ -1,0 +1,13 @@
+*
+
+!./.xinitrc
+!./.config/i3/config
+!./README.md
+!./.vimrc
+!./.pythonrc
+!./.Xresources
+!./.bash_profile
+!./.bashrc
+!./.tmux.conf
+!./.sqliterc
+!./.gitignore
