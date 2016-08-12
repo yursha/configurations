@@ -9,5 +9,6 @@
 !./.bash_profile
 !./.bashrc
 !./.tmux.conf
+!./.ssh/config
 !./.sqliterc
 !./.gitignore
