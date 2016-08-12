@@ -1,3 +1,3 @@
 xrdb -merge ~/.Xresources
 # xrandr --dpi 220
-exec i3
+exec ssh-agent i3

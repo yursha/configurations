@@ -1,4 +1,5 @@
 # .bashrc
+echo "Running ~/.bashrc"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -77,7 +78,7 @@ function ouch {
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
-### Settings dependent of whether we are in an X session or in Linux VT ###
+# Settings dependent of whether we are in an X session or in Linux VT
 if [[ -n $DISPLAY ]]; then
 
     # Disable CAPS_LOCK key
@@ -93,6 +94,12 @@ else
     # we only need it on HiDPI displays
     # setfont ter-v32n
     :
+fi
+
+# add keys to ssh-agent if they has not yet been added.
+if [[ $(ssh-add -l) = "The agent has no identities." ]]; then
+    echo "Adding private keys to the ssh-agent..."
+    ssh-add /home/ayursha/.ssh/*rsa
 fi
 
 
