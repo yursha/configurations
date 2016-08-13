@@ -1,10 +1,10 @@
 # .bashrc
 echo "Running ~/.bashrc"
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+echo "sourcing env files"
+for i in /etc/profile.d/*.sh ; do
+    . "$i"
+done
 
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return
@@ -19,7 +19,7 @@ PS2='> '
 
 LC_ALL=en_US.UTF-8
 
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 export JAVA7_HOME=~/tools/jdk1.7.0_79
 JAVA7_BIN=$JAVA7_HOME/bin
@@ -107,5 +107,5 @@ fi
 
 # Workspace specific shell settings
 if [ -f ~/.workrc ]; then
-    . .workrc
+    . ~/.workrc
 fi
