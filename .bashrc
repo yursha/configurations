@@ -60,10 +60,11 @@ unset SSH_ASKPASS
 
 ### ALIASES ###
 
-alias ls='ls --color=auto --group-directories-first -ah'
+alias ls='ls --color=auto --group-directories-first -a'
 
-alias ll='ls -l'
-alias l1='ls -1'
+alias ll='ls -lh'
+
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E --color=never "state|to\ full|to\ empty|percentage"'
 
 ### FUNCTIONS ###
 
