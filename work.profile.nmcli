@@ -1,0 +1,8 @@
+connection.id:                          <whatever>
+802-1x.eap:                             peap
+802-1x.identity:                        <hidden>
+802-1x.phase2-auth:                     mschapv2
+802-1x.password:                        <hidden>
+802-11-wireless.ssid:                   <SSID>
+802-11-wireless-security.key-mgmt:      wpa-eap
+802-11-wireless-security.proto:         wpa,rsn
