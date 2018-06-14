@@ -78,7 +78,7 @@ function ouch {
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# Disable ctrl-s / ctrl-q commands
+# Disable turning on/off output with ctrl-s / ctrl-q commands
 stty -ixon
 
 # Settings dependent of whether we are in an X session or in Linux VT
