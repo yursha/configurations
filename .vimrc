@@ -40,3 +40,4 @@ set iskeyword=@,48-57,192-255,-
 set cmdheight=1
 
 set autoread
+set wildmenu
