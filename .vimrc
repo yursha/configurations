@@ -1,43 +1,40 @@
+" TODO: Check if `:help defaults.vim` is better than what we have here.
+
 set nocompatible
 set encoding=utf-8
 
 filetype on
 syntax on
 
-" don't write junk files
-set nobackup " don't create backup `.swp` files
-set nowritebackup
+" We're not as memory-limited.
 set noswapfile
 
-" configure indentation
+" Make <BS>, CTRL-W, CTRL-U work in insert mode.
 set backspace=eol,start,indent
-set expandtab " replace `tab` with spaces
-set tabstop=2
-set shiftwidth=2
-set list " display EOL markers
-set autoindent " automatically indent on `enter` key.
-filetype plugin indent on
 
-" configure search and replace
+" Please use spaces, not <Tab>.
+set expandtab
+
+" Keep indentation when starting a line in the current scope.
+set autoindent
+
+" Indent by 2 spaces when starting a line with a new scope.
+set shiftwidth=2
+
+" widgets
+set ruler
+set number
+
+" search
 set hlsearch
 set incsearch
-set noignorecase
 set nowrapscan
 
-" configure appearance
-set ruler " show current line, column and percentage of total file size
-set number " show line numbers
-set cursorline " show current line
-
 " misc
-set wrap
-set eol " append newline (ASCII 10) when saving file
 set scrolloff=5
-set sidescroll=10
-set whichwrap=b,s,<,>,[,]
-set listchars=tab:>-,trail:-
-set iskeyword=@,48-57,192-255,-
-set cmdheight=1
 
+" Stay in sync with disk as much as possible.
 set autoread
+set autowriteall
+
 set wildmenu
