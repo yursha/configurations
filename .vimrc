@@ -30,7 +30,6 @@ set hlsearch
 set incsearch
 set nowrapscan
 
-" misc
 set scrolloff=5
 
 " Stay in sync with disk as much as possible.
