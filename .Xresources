@@ -1,5 +1,0 @@
-! Look for possible color values at https://critical.ch/xterm/
-XTerm*Background: LemonChiffon
-XTerm*faceName: Terminus:style=Regular:size=10
-XTerm*renderFont: true
-Xft.dpi: 220
