@@ -1,0 +1,7 @@
+# Increase backlight
+"/home/alex/Repos/scripts/brighter.sh +10"
+F7
+
+# Decrease backlight
+"/home/alex/Repos/scripts/brighter.sh -10"
+F6
