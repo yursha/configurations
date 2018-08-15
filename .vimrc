@@ -2,6 +2,7 @@
 
 set nocompatible
 set encoding=utf-8
+set term=builtin_ansi
 
 filetype on
 syntax on
