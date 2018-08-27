@@ -28,9 +28,10 @@ else
 fi
 
 # add keys to ssh-agent if they has not yet been added.
+eval `ssh-agent -s`
 if [[ $(ssh-add -l) = "The agent has no identities." ]]; then
     echo "Adding private keys to the ssh-agent..."
-    ssh-add /home/ayursha/.ssh/*rsa
+    ssh-add /home/alex/.ssh/*rsa
 fi
 
 # Workspace specific shell settings
