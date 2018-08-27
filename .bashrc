@@ -38,3 +38,5 @@ fi
 if [ -f ~/.workrc ]; then
     . ~/.workrc
 fi
+
+alias vi=vim
