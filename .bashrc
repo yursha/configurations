@@ -17,4 +17,4 @@ fi
 
 alias vi=vim
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E --color=never "state|to\ full|to\ empty|percentage"'
-
+alias ls="ls --color=auto"
