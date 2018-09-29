@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-LC_ALL=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Disable turning on/off output with ctrl-s / ctrl-q commands
 stty -ixon
