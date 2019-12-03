@@ -38,3 +38,4 @@ set autoread
 set autowriteall
 
 set wildmenu
+set paste
