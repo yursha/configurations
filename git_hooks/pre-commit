@@ -1,0 +1,9 @@
+#!/bin/sh
+
+FILES=$(git diff --cached --name-only)
+for FILE in $FILES; do
+  if [ -f "$FILE" ]; then
+    xargs clang-format -i "$FILE"
+    git add "$FILE"
+  fi
+done
